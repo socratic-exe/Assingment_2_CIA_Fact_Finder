@@ -1,8 +1,10 @@
+# Referances: stackoverflow, geeksforgeeks,
+
 # Import pandas
-import pandas as pd
+import pandas as pd # Referance: Geeksforgeeks
 
 # Initialize CSV file as a dataframe
-df = pd.read_csv("CIA Fact Finder.csv")
+df = pd.read_csv("CIA Fact Finder.csv") # Referance: Geeksforgeeks
 
 def country():
     # Make it into a global variable for easiness
@@ -10,9 +12,9 @@ def country():
     global country_list
     global country_number
     # Turn the "Country" column of the csv file into a list
-    country_list = df["Country"].tolist()
+    country_list = df["Country"].tolist() # Referance: Stackoverflow and Geeksforgeeks
     # Change the formating by making only the first letter uppercase and removing all spaces
-    country_list = list(map(str.capitalize, country_list))
+    country_list = list(map(str.capitalize, country_list)) # Referance: Stackoverflow
     new_country_list = []
     for element in country_list:
         new_country_list.append(element.replace(" ", ""))
