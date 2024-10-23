@@ -143,11 +143,11 @@ def metric():
 def sort():
     # Obtains the metric to sort the countries by
     sorting_metric = metric()
-    sorting_format = input("\nDo you want an ascending list (a) or a decending list(d)? ").lower()
+    sorting_format = input("\nDo you want an ascending list (a) or a descending list(d)? ").lower()
     # Error handling
-    while sorting_format != "a" and sorting_format != "b":
+    while sorting_format != "a" and sorting_format != "d":
         print("Invalid input! Please enter a or d")
-        sorting_format = input("\nDo you want an ascending list (a) or a decending list(d)? ").lower()
+        sorting_format = input("\nDo you want an ascending list (a) or a descending list(d)? ").lower()
     # Sorts the dataframe
     if sorting_format == "a":
         sorted_df = df.sort_values(by=[sorting_metric], ascending=True) #Reference: Geeksforgeeks
