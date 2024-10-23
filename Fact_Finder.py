@@ -150,8 +150,10 @@ def sort():
         sorting_format = input("\nDo you want an ascending list (a) or a descending list(d)? ").lower()
     # Sorts the dataframe
     if sorting_format == "a":
+        sorting_format = "ascending"
         sorted_df = df.sort_values(by=[sorting_metric], ascending=True) #Reference: Geeksforgeeks
     elif sorting_format == "d":
+        sorting_format = "descending"
         sorted_df = df.sort_values(by=[sorting_metric], ascending=False)
     print("\nList of Countries sorted", sorting_format, "based on", sorting_metric, ":")
     print(sorted_df[["Country", sorting_metric]])
